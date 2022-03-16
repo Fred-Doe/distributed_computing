@@ -8,7 +8,7 @@ port = int(input("Port: "))
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((host, port))
     s.listen()
-    print(f"Listenning on {(host, port)}\nWaiting for connection...\n")
+    print(f"Listenning on {(host, port)}\nWaiting for connections...\n")
     conn, addr = s.accept()
     with conn:
         name = conn.recv(1024)
